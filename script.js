@@ -89,7 +89,7 @@ async function selectionSort(array) {
         bars[min_idx].style.backgroundColor = "pink";
         for (let j = i + 1; j < array.length; j++) {
             if (array[j] < array[min_idx]) {
-                await sleep(25);
+                await sleep(20);
                 bars[min_idx].style.backgroundColor = "";
                 min_idx = j;
                 bars[j].style.backgroundColor = "pink";
@@ -102,7 +102,7 @@ async function selectionSort(array) {
             array[i] = array[min_idx];
             array[min_idx] = temp;
 
-            await sleep(20);
+            await sleep(10);
             bars[i].style.height = array[i] * 10 + 'px';
 
             bars[min_idx].style.height = array[min_idx] * 10 + 'px';
@@ -111,13 +111,13 @@ async function selectionSort(array) {
             await sleep(1);
             bars[k].style.backgroundColor = "";
         }
-        await sleep(40);
+        await sleep(20);
     }
 
 
     for (let i = 0; i < array.length; i++) {
         bars[i].style.backgroundColor = "";
-        await sleep(30);
+        await sleep(20);
         bars[i].style.backgroundColor = "rgb(0, 255, 30)";
     }
     return array
